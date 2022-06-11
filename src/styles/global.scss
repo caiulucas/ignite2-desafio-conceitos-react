@@ -1,0 +1,45 @@
+@import './colors.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  :focus {
+    outline: 1px solid $purple-500;
+  }
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 87.5%;
+  }
+}
+
+body, input, button {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+  font-size: 1rem;
+  color: $gray-100;
+}
+
+body {
+  background-color: $gray-600;
+}
+
+input, button {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+[disabled] {
+  filter: brightness(0.7);
+  cursor: not-allowed;
+}

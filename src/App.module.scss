@@ -1,0 +1,124 @@
+@import './styles/colors.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $gray-700;
+  height: 12.5rem;
+
+  > img {
+    height: 3rem;
+  }
+}
+
+.container {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  .addForm {
+    position: relative;
+    top: -1.625rem;
+
+    display: flex;
+    gap: 0.5rem;
+
+    input, button {
+      border-radius: 8px;
+      padding: 1rem;
+    }
+    
+    input {
+      width: 100%;
+      background-color: $gray-500;
+      border: 1px solid $gray-700;
+
+      &::placeholder {
+        color: $gray-300;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: $blue-500;
+
+      transition: background-color 0.2s;
+
+      &:not(:disabled):hover {
+        background-color: $blue-300;
+      }
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+
+  .taskList {
+    margin: 4rem 0;
+    
+    .taskListStatus {
+      display: flex;
+      justify-content: space-between;
+
+      > h3 {
+        font-size: 0.875rem;
+        color: $blue-300;
+
+        &:nth-child(2) {
+          color: $purple-300;
+        }
+
+        span {
+          font-size: 0.75rem;
+          margin-left: 0.5rem;
+          padding: 0.125rem 0.5rem;
+          border-radius: 16px;
+          color: $gray-100;
+
+          background-color: $gray-400;
+        }
+      }
+    }
+
+    ul {
+      margin-top: 1.5rem;
+      list-style: none;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 0.75rem;  
+    }
+
+    .empty {
+      margin-top: 1.5rem;
+      padding: 4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+      border-top: 1px solid $gray-400;
+      border-radius: 8px;
+
+      align-items: center;
+
+      svg {
+        width: 3.5rem;
+        height: 3.5rem;
+
+        color: $gray-350;
+        margin-bottom: 1rem;
+      }
+
+      h3, p {
+        color: $gray-300;
+        font-size: 1rem;
+      }
+    }
+  }
+}
